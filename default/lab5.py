@@ -30,9 +30,9 @@ RDDResult.saveAsTextFile(outputPath)
 #Keep only the lines with a frequency freq greater than 0.8*maxfreq
 #Define function for filter
 def newFilter(line):
-    l = line.split("\t")
-    freq = int(l[1])
-    if (freq >= 0.8*maxFreq):
+    freq = (line.split('\t'))[1]
+    print(freq)
+    if ( int(freq) > (int(maxFreq))*0.8):
         return True
     else: return False
     
