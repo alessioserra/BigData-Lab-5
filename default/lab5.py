@@ -45,3 +45,5 @@ print("Number of filtered lines = "+str(numberLines2))
 RDDBestWords = RDDwordsNew.map(lambda line : line.split("\t")[0])
 #Save the results in the output path
 RDDBestWords.saveAsTextFile(outputPath)
+
+sc.stop()
